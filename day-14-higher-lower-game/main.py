@@ -4,15 +4,18 @@ import random
 import os
 import platform
 
+
 def compare(A, B):
     if A['follower_count'] > B['follower_count']:
         return 'A'
     return 'B'
 
+
 def clear():
     if platform == "win32":
         return os.system("cls")
     return os.system("clear")
+
 
 while True:
     A = random.choice(data)
