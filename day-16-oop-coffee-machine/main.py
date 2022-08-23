@@ -18,5 +18,6 @@ while is_on:
         drink = menu.find_drink(choice)
         if drink is None:
             continue
-        if not coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+        if not (coffee_maker.is_resource_sufficient(drink)
+                and money_machine.make_payment(drink.cost)):
             coffee_maker.make_coffee(drink)
